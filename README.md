@@ -1,5 +1,5 @@
 # DATA_AGUMENTATION_FRAMEWORK
-Dated :27 June 2023
+Dated:27 June 2023
 
 ## ALBUMENTATION:
 ```
@@ -8,7 +8,7 @@ Albumentations efficiently implements a rich variety of image transform operatio
 and does so while providing a concise, yet powerful image augmentation interface for different computer vision tasks,
 including object classification, segmentation, and detection.
 ```
-checkout the link for further information : https://albumentations.ai/
+checkout the link for further information: https://albumentations.ai/
 
 
 ### Getting started
