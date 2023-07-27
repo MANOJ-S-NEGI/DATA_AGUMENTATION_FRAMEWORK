@@ -2,20 +2,19 @@
 Dated:27 June 2023
 
 ## ALBUMENTATION:
-```
-Albumentations is a Python library for fast and flexible image augmentations.
-Albumentations efficiently implements a rich variety of image transform operations that are optimized for performance,
+
+Albumentations is a Python library for fast and flexible image augmentations.Albumentations efficiently implements a rich variety of image transform operations that are optimized for performance,
 and does so while providing a concise, yet powerful image augmentation interface for different computer vision tasks,
 including object classification, segmentation, and detection.
-```
+
 checkout the link for further information: https://albumentations.ai/
 
 
 ### Getting started
 * Albumentations require Python 3.6 or higher. To install the library from PyPI run
-  ```
+```
   pip install -U albumentations
-  ```
+ ```
 * Import the libraries
  ```
   import albumentations as ab
@@ -75,5 +74,43 @@ Furthermore, parameters can be used as shown: source - https://albumentations.ai
       plt.axis(False);
   ```
  ![noise](https://github.com/MANOJ-S-NEGI/DATA_AGUMENTATION_FRAMEWORK/assets/99602627/5f66da97-e5ea-4950-b224-f70086d3280b)
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+# AGUMENTOR
+In principle, Augmentor consists of a number of classes for standard image manipulation functions, such as the Rotate class or the Crop class. You interact and use these classes using a large number of convenience functions, which cover most of the functions you might require when augmenting image datasets for machine learning problems.
+
+Because image augmentation is often a multi-stage procedure, Augmentor uses a pipeline-based approach, where operations are added sequentially in order to generate a pipeline. Images are then passed through this pipeline, where each operation is applied to the image as it passes through.
+  * Do check out the source link - https://augmentor.readthedocs.io/en/stable/userguide/mainfeatures.html
+
+
+```
+import Augmentor
+a = Augmentor.Pipeline(path)
+```
+Here,
+    * Point to a directory containing ground truth data.
+    *Images with the same file names will be added as ground truth data
+    * and augmented in parallel to the original data.
+    ```
+    a.ground_truth("path/to/ground_truth_images/")
+    ```
+
+* Add operations to the pipeline as normal:
+```
+a.rotate(probability=.25, max_left_rotation=5, max_right_rotation=5)
+a.flip_left_right(probability=0.5)
+a.zoom_random(probability=0.5, percentage_area=0.8)
+a.flip_top_bottom(probability=0.5)
+a.sample(5)
+```
+ * for other Parameters: link - https://augmentor.readthedocs.io/en/stable/userguide/mainfeatures.html
+
+
+![agumentor](https://github.com/MANOJ-S-NEGI/DATA_AGUMENTATION_FRAMEWORK/assets/99602627/d1682deb-6561-4e83-ab7d-49600ac6570e)
+
+
+ 
 
           
